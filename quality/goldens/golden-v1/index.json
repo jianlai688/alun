@@ -1,0 +1,72 @@
+{
+  "version": "golden-v1",
+  "created_at": "2026-11-06",
+  "description": "A论 V1.1 黄金集 v1：现有 8 篇 ready 文档的结构标注，覆盖研究论文、综述、政策研究与报道四类文体。",
+  "annotation_rules": "见 docs/质量/01-黄金集与标注手册.md",
+  "documents": [
+    {
+      "case_id": "case_doc_37b9cbf889",
+      "doc_id": "doc_37b9cbf889",
+      "file": "doc_37b9cbf889.json",
+      "doc_type": "research_paper",
+      "title": "基于强化微调的低资源电力文档关键信息提取研究与应用",
+      "headings": 25
+    },
+    {
+      "case_id": "case_doc_714388e63c",
+      "doc_id": "doc_714388e63c",
+      "file": "doc_714388e63c.json",
+      "doc_type": "policy",
+      "title": "从技术赋能到场景反哺:地方政府“人工智能+教育”政策框架及其生成逻辑",
+      "headings": 7
+    },
+    {
+      "case_id": "case_doc_262ca79715",
+      "doc_id": "doc_262ca79715",
+      "file": "doc_262ca79715.json",
+      "doc_type": "review",
+      "title": "基于扩散模型的图像修复方法与理论进展综述",
+      "headings": 34
+    },
+    {
+      "case_id": "case_doc_c82c76b7aa",
+      "doc_id": "doc_c82c76b7aa",
+      "file": "doc_c82c76b7aa.json",
+      "doc_type": "review",
+      "title": "检索增强生成综述:方法与应用",
+      "headings": 17
+    },
+    {
+      "case_id": "case_doc_06f1cbf896",
+      "doc_id": "doc_06f1cbf896",
+      "file": "doc_06f1cbf896.json",
+      "doc_type": "review",
+      "title": "面向大语言模型生成能力提升的检索增强生成研究进展",
+      "headings": 39
+    },
+    {
+      "case_id": "case_doc_e9e81863d1",
+      "doc_id": "doc_e9e81863d1",
+      "file": "doc_e9e81863d1.json",
+      "doc_type": "news",
+      "title": "AI 智能体从概念走进场景",
+      "headings": 3
+    },
+    {
+      "case_id": "case_doc_f4c5b00bee",
+      "doc_id": "doc_f4c5b00bee",
+      "file": "doc_f4c5b00bee.json",
+      "doc_type": "research_paper",
+      "title": "CLIP 语义引导与Mamba-KAN 协同的医学图像分割模型",
+      "headings": 16
+    },
+    {
+      "case_id": "case_doc_973e91772c",
+      "doc_id": "doc_973e91772c",
+      "file": "doc_973e91772c.json",
+      "doc_type": "research_paper",
+      "title": "面向多模态隐喻检测的判别依据精炼蒸馏方法",
+      "headings": 28
+    }
+  ]
+}

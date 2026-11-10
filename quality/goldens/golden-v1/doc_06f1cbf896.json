@@ -1,0 +1,211 @@
+{
+  "case_id": "case_doc_06f1cbf896",
+  "doc_id": "doc_06f1cbf896",
+  "title": "面向大语言模型生成能力提升的检索增强生成研究进展",
+  "doc_type": "review",
+  "page_count": 30,
+  "source_file": "doc_06f1cbf896.pdf",
+  "annotation": {
+    "method": "native_pdf_toc",
+    "annotator": "QA",
+    "annotated_at": "2026-11-06",
+    "notes": "直接采用 PDF 原生书签（独立于解析器），排除参考文献。"
+  },
+  "headings": [
+    {
+      "title": "1 大语言模型应用挑战与增强策略分析",
+      "level": 1,
+      "page": 3
+    },
+    {
+      "title": "1.1 大语言模型",
+      "level": 2,
+      "page": 3
+    },
+    {
+      "title": "1.2 大语言模型应用挑战",
+      "level": 2,
+      "page": 4
+    },
+    {
+      "title": "1.2.1 大语言模型“幻觉”问题",
+      "level": 3,
+      "page": 4
+    },
+    {
+      "title": "1.2.2 大语言模型信息滞后且专业领域知识缺乏",
+      "level": 3,
+      "page": 5
+    },
+    {
+      "title": "1.2.3 大语言模型增强策略对比",
+      "level": 3,
+      "page": 6
+    },
+    {
+      "title": "2 检索增强生成(RAG)",
+      "level": 1,
+      "page": 6
+    },
+    {
+      "title": "2.1 检索方法",
+      "level": 2,
+      "page": 6
+    },
+    {
+      "title": "2.1.1 向量建模检索",
+      "level": 3,
+      "page": 6
+    },
+    {
+      "title": "2.1.2 图结构检索",
+      "level": 3,
+      "page": 7
+    },
+    {
+      "title": "2.1.3 层级组织检索",
+      "level": 3,
+      "page": 8
+    },
+    {
+      "title": "2.1.4 多跳检索",
+      "level": 3,
+      "page": 8
+    },
+    {
+      "title": "2.2 检索噪声影响与生成增强方法",
+      "level": 2,
+      "page": 10
+    },
+    {
+      "title": "2.2.1 检索噪声对生成的影响",
+      "level": 3,
+      "page": 10
+    },
+    {
+      "title": "2.2.2 提示工程",
+      "level": 3,
+      "page": 10
+    },
+    {
+      "title": "2.2.3 模型参数调优",
+      "level": 3,
+      "page": 11
+    },
+    {
+      "title": "2.2.4 模型后处理",
+      "level": 3,
+      "page": 13
+    },
+    {
+      "title": "2.3 不同领域中的检索增强生成方法",
+      "level": 2,
+      "page": 13
+    },
+    {
+      "title": "2.3.1 文本领域的RAG",
+      "level": 3,
+      "page": 13
+    },
+    {
+      "title": "2.3.2 代码领域的RAG",
+      "level": 3,
+      "page": 14
+    },
+    {
+      "title": "2.3.3 图像领域的RAG",
+      "level": 3,
+      "page": 16
+    },
+    {
+      "title": "2.3.4 音视频领域的RAG",
+      "level": 3,
+      "page": 16
+    },
+    {
+      "title": "2.3.5 多模态下的RAG",
+      "level": 3,
+      "page": 17
+    },
+    {
+      "title": "2.4 数据集",
+      "level": 2,
+      "page": 17
+    },
+    {
+      "title": "2.4.1 开放域问答数据集",
+      "level": 3,
+      "page": 18
+    },
+    {
+      "title": "2.4.2 事实验证数据集",
+      "level": 3,
+      "page": 18
+    },
+    {
+      "title": "2.4.3 多跳检索数据集",
+      "level": 3,
+      "page": 19
+    },
+    {
+      "title": "2.5 主流 RAG 方法的基准评测与对比分析",
+      "level": 2,
+      "page": 19
+    },
+    {
+      "title": "2.5.1 主流 RAG 方法在基准数据集上的评测结果汇总",
+      "level": 3,
+      "page": 19
+    },
+    {
+      "title": "2.5.2 定量对比分析与评测趋势讨论",
+      "level": 3,
+      "page": 19
+    },
+    {
+      "title": "3 RAG结合LLM领域应用分析",
+      "level": 1,
+      "page": 20
+    },
+    {
+      "title": "3.1 技术框架的跨领域适用性分析",
+      "level": 2,
+      "page": 20
+    },
+    {
+      "title": "3.2 典型应用场景分析",
+      "level": 2,
+      "page": 21
+    },
+    {
+      "title": "3.2.1 智能咨询与问答系统",
+      "level": 3,
+      "page": 21
+    },
+    {
+      "title": "3.2.2 文档生成与合规审查",
+      "level": 3,
+      "page": 21
+    },
+    {
+      "title": "3.2.3 决策支持系统",
+      "level": 3,
+      "page": 22
+    },
+    {
+      "title": "3.3 技术演进方向",
+      "level": 2,
+      "page": 22
+    },
+    {
+      "title": "4 展　望",
+      "level": 1,
+      "page": 23
+    },
+    {
+      "title": "5 结束语",
+      "level": 1,
+      "page": 23
+    }
+  ]
+}

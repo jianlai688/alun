@@ -1,0 +1,156 @@
+{
+  "case_id": "case_doc_973e91772c",
+  "doc_id": "doc_973e91772c",
+  "title": "面向多模态隐喻检测的判别依据精炼蒸馏方法",
+  "doc_type": "research_paper",
+  "page_count": 16,
+  "source_file": "doc_973e91772c.pdf",
+  "annotation": {
+    "method": "parser_seeded_manual_review",
+    "annotator": "QA",
+    "annotated_at": "2026-11-06",
+    "notes": "以当前解析输出为底稿，逐篇核对 PDF 版式、编号与层级后定稿；非独立盲标。"
+  },
+  "headings": [
+    {
+      "title": "0 引言",
+      "level": 1,
+      "page": 3
+    },
+    {
+      "title": "1 相关工作",
+      "level": 1,
+      "page": 4
+    },
+    {
+      "title": "1.1 多模态隐喻数据集与任务",
+      "level": 2,
+      "page": 4
+    },
+    {
+      "title": "1.2 多模态隐喻检测方法",
+      "level": 2,
+      "page": 4
+    },
+    {
+      "title": "1.3 基于判别依据的监督与生成文本质量风险",
+      "level": 2,
+      "page": 4
+    },
+    {
+      "title": "2 双视角判别依据精炼蒸馏框架",
+      "level": 1,
+      "page": 4
+    },
+    {
+      "title": "2.1 任务定义与总体框架",
+      "level": 2,
+      "page": 4
+    },
+    {
+      "title": "2.2 双视角判别依据生成",
+      "level": 2,
+      "page": 5
+    },
+    {
+      "title": "2.3 判别依据的质量诊断",
+      "level": 2,
+      "page": 5
+    },
+    {
+      "title": "2.3.1 标签泄露与答案指示线索审计",
+      "level": 3,
+      "page": 5
+    },
+    {
+      "title": "2.3.2 模板短语审计",
+      "level": 3,
+      "page": 6
+    },
+    {
+      "title": "2.3.3 文本探针诊断",
+      "level": 3,
+      "page": 6
+    },
+    {
+      "title": "2.4 判别依据的受控精炼",
+      "level": 2,
+      "page": 6
+    },
+    {
+      "title": "2.4.1 判别依据去泄露与去模板化",
+      "level": 3,
+      "page": 6
+    },
+    {
+      "title": "2.4.2 判别依据精炼与单模态捷径抑制",
+      "level": 3,
+      "page": 6
+    },
+    {
+      "title": "2.5 基于精炼判别依据的学生蒸馏",
+      "level": 2,
+      "page": 7
+    },
+    {
+      "title": "3 实验设置",
+      "level": 1,
+      "page": 7
+    },
+    {
+      "title": "3.1 数据集与评价指标",
+      "level": 2,
+      "page": 7
+    },
+    {
+      "title": "3.2 对比方法",
+      "level": 2,
+      "page": 8
+    },
+    {
+      "title": "3.3 实现细节",
+      "level": 2,
+      "page": 8
+    },
+    {
+      "title": "4 实验结果与分析",
+      "level": 1,
+      "page": 9
+    },
+    {
+      "title": "4.1 MetMeme 数据集上的对比实验结果",
+      "level": 2,
+      "page": 9
+    },
+    {
+      "title": "4.2 M3UCD 数据集上的实验结果",
+      "level": 2,
+      "page": 10
+    },
+    {
+      "title": "4.3 判别依据的质量诊断与精炼效果分析",
+      "level": 2,
+      "page": 10
+    },
+    {
+      "title": "4.4 学生模型生成判别依据的质量评估",
+      "level": 2,
+      "page": 12
+    },
+    {
+      "title": "4.5 消融实验",
+      "level": 2,
+      "page": 12
+    },
+    {
+      "title": "4.6 案例分析",
+      "level": 2,
+      "page": 14
+    },
+    {
+      "title": "5 结语",
+      "level": 1,
+      "page": 15
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "case_id": "case_doc_c82c76b7aa",
+  "doc_id": "doc_c82c76b7aa",
+  "title": "检索增强生成综述:方法与应用",
+  "doc_type": "review",
+  "page_count": 17,
+  "source_file": "doc_c82c76b7aa.pdf",
+  "annotation": {
+    "method": "parser_seeded_manual_review",
+    "annotator": "QA",
+    "annotated_at": "2026-11-06",
+    "notes": "以当前解析输出为底稿，逐篇核对 PDF 版式、编号与层级后定稿；非独立盲标。"
+  },
+  "headings": [
+    {
+      "title": "1 引言",
+      "level": 1,
+      "page": 1
+    },
+    {
+      "title": "2 RAG方法概述",
+      "level": 1,
+      "page": 3
+    },
+    {
+      "title": "2.1 分块优化的RAG方法",
+      "level": 2,
+      "page": 4
+    },
+    {
+      "title": "2.2 检索端改进的RAG方法",
+      "level": 2,
+      "page": 5
+    },
+    {
+      "title": "2.3 减少上下文输入的RAG方法",
+      "level": 2,
+      "page": 6
+    },
+    {
+      "title": "2.4 与知识图谱结合的RAG方法",
+      "level": 2,
+      "page": 7
+    },
+    {
+      "title": "2.5 四类方法对比分析",
+      "level": 2,
+      "page": 8
+    },
+    {
+      "title": "3 RAG评估与开源项目",
+      "level": 1,
+      "page": 8
+    },
+    {
+      "title": "3.1 基准和数据集",
+      "level": 2,
+      "page": 9
+    },
+    {
+      "title": "3.2 评价指标",
+      "level": 2,
+      "page": 9
+    },
+    {
+      "title": "3.3 RAG开源项目",
+      "level": 2,
+      "page": 10
+    },
+    {
+      "title": "4 RAG应用",
+      "level": 1,
+      "page": 11
+    },
+    {
+      "title": "4.1 下游任务",
+      "level": 2,
+      "page": 11
+    },
+    {
+      "title": "4.2 垂直领域",
+      "level": 2,
+      "page": 11
+    },
+    {
+      "title": "5 RAG未来方向",
+      "level": 1,
+      "page": 12
+    },
+    {
+      "title": "5.1 多模态RAG",
+      "level": 2,
+      "page": 12
+    },
+    {
+      "title": "5.2 RAG与Agent集成",
+      "level": 2,
+      "page": 13
+    }
+  ]
+}

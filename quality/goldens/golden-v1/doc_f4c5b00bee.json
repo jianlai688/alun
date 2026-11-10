@@ -1,0 +1,96 @@
+{
+  "case_id": "case_doc_f4c5b00bee",
+  "doc_id": "doc_f4c5b00bee",
+  "title": "CLIP 语义引导与Mamba-KAN 协同的医学图像分割模型",
+  "doc_type": "research_paper",
+  "page_count": 10,
+  "source_file": "doc_f4c5b00bee.pdf",
+  "annotation": {
+    "method": "parser_seeded_manual_review",
+    "annotator": "QA",
+    "annotated_at": "2026-11-06",
+    "notes": "以当前解析输出为底稿，逐篇核对 PDF 版式、编号与层级后定稿；非独立盲标。"
+  },
+  "headings": [
+    {
+      "title": "0 引言",
+      "level": 1,
+      "page": 2
+    },
+    {
+      "title": "1 CLIP引导与Mamba-KAN 协同的医学图像分割模型",
+      "level": 1,
+      "page": 3
+    },
+    {
+      "title": "1.1 模型整体结构介绍",
+      "level": 2,
+      "page": 3
+    },
+    {
+      "title": "1.2 K-M Block 模块设计",
+      "level": 2,
+      "page": 4
+    },
+    {
+      "title": "1.3 KAN 卷积模块",
+      "level": 2,
+      "page": 5
+    },
+    {
+      "title": "1.4 CLIP 语义引导模块",
+      "level": 2,
+      "page": 5
+    },
+    {
+      "title": "1.4.1 模块引入背景",
+      "level": 3,
+      "page": 5
+    },
+    {
+      "title": "1.4.2 模块设计与工作流程",
+      "level": 3,
+      "page": 5
+    },
+    {
+      "title": "2 数据集及实验结果分析",
+      "level": 1,
+      "page": 6
+    },
+    {
+      "title": "2.1 数据集",
+      "level": 2,
+      "page": 6
+    },
+    {
+      "title": "2.2 实验细节",
+      "level": 2,
+      "page": 6
+    },
+    {
+      "title": "2.2.1 训练细节",
+      "level": 3,
+      "page": 6
+    },
+    {
+      "title": "2.2.2 CLIP 语义细节",
+      "level": 3,
+      "page": 7
+    },
+    {
+      "title": "2.2.3 消融实验及对比试验",
+      "level": 3,
+      "page": 7
+    },
+    {
+      "title": "2.2.4 小样本实验",
+      "level": 3,
+      "page": 8
+    },
+    {
+      "title": "3 结语",
+      "level": 1,
+      "page": 9
+    }
+  ]
+}

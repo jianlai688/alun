@@ -1,0 +1,31 @@
+{
+  "case_id": "case_doc_e9e81863d1",
+  "doc_id": "doc_e9e81863d1",
+  "title": "AI 智能体从概念走进场景",
+  "doc_type": "news",
+  "page_count": 3,
+  "source_file": "doc_e9e81863d1.pdf",
+  "annotation": {
+    "method": "parser_seeded_manual_review",
+    "annotator": "QA",
+    "annotated_at": "2026-11-06",
+    "notes": "以当前解析输出为底稿，逐篇核对 PDF 版式、编号与层级后定稿；非独立盲标。"
+  },
+  "headings": [
+    {
+      "title": "从“用AI”到“用好AI”",
+      "level": 1,
+      "page": 1
+    },
+    {
+      "title": "懂政务,会干活",
+      "level": 1,
+      "page": 2
+    },
+    {
+      "title": "关键在“连接”",
+      "level": 1,
+      "page": 2
+    }
+  ]
+}

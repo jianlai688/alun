@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A论 · 论文导读智能体</title>
+  <meta name="description" content="A论先读懂论文结构，再向你提问。每道题都能回到原文页码。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23B23A2B'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23F7F1E7' font-family='serif'%3E论%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20261107o" />
+  <link rel="stylesheet" href="/assets/assistant.css?v=20261107o" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <div class="boot">
+      <div class="boot-seal">论</div>
+      <div class="boot-text">A论正在铺开稿纸…</div>
+    </div>
+  </div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="/assets/vendor/mathjax/tex-svg.js"></script>
+  <script src="/assets/app.js?v=20261107o"></script>
+  <script src="/assets/assistant.js?v=20261107o"></script>
+</body>
+</html>

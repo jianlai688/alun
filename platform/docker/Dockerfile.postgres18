@@ -1,0 +1,7 @@
+FROM postgres:17-alpine
+RUN apk add --no-cache postgresql18 postgresql18-client postgresql-pgvector
+ENV PGDATA=/var/lib/postgresql18/data
+RUN mkdir -p "$PGDATA" && chown -R postgres:postgres /var/lib/postgresql18
+USER postgres
+COPY entrypoint-pg18.sh /usr/local/bin/entrypoint-pg18.sh
+ENTRYPOINT ["/bin/sh","/usr/local/bin/entrypoint-pg18.sh"]

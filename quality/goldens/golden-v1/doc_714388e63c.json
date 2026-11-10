@@ -1,0 +1,51 @@
+{
+  "case_id": "case_doc_714388e63c",
+  "doc_id": "doc_714388e63c",
+  "title": "从技术赋能到场景反哺:地方政府“人工智能+教育”政策框架及其生成逻辑",
+  "doc_type": "policy",
+  "page_count": 13,
+  "source_file": "doc_714388e63c.pdf",
+  "annotation": {
+    "method": "parser_seeded_manual_review",
+    "annotator": "QA",
+    "annotated_at": "2026-11-06",
+    "notes": "以当前解析输出为底稿，逐篇核对 PDF 版式、编号与层级后定稿；非独立盲标。"
+  },
+  "headings": [
+    {
+      "title": "一、引言",
+      "level": 1,
+      "page": 2
+    },
+    {
+      "title": "二、文献评述:人工智能政策框架研究",
+      "level": 1,
+      "page": 3
+    },
+    {
+      "title": "三、理论分析框架",
+      "level": 1,
+      "page": 3
+    },
+    {
+      "title": "四、研究设计",
+      "level": 1,
+      "page": 4
+    },
+    {
+      "title": "五、地方政府“人工智能+教育”的政策框架",
+      "level": 1,
+      "page": 5
+    },
+    {
+      "title": "六、地方框架组合及其生成逻辑:典型省份的政策框架",
+      "level": 1,
+      "page": 8
+    },
+    {
+      "title": "七、结论与讨论",
+      "level": 1,
+      "page": 11
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "total_source_lines": 9035,
+  "total_annotated_lines": 20979,
+  "files": [
+    {
+      "file": "__init__.py",
+      "source_lines": 3,
+      "annotated_lines": 56
+    },
+    {
+      "file": "admin.py",
+      "source_lines": 318,
+      "annotated_lines": 652
+    },
+    {
+      "file": "assignments.py",
+      "source_lines": 277,
+      "annotated_lines": 680
+    },
+    {
+      "file": "assistant.py",
+      "source_lines": 376,
+      "annotated_lines": 931
+    },
+    {
+      "file": "audit.py",
+      "source_lines": 62,
+      "annotated_lines": 213
+    },
+    {
+      "file": "chart_api.py",
+      "source_lines": 57,
+      "annotated_lines": 189
+    },
+    {
+      "file": "config.py",
+      "source_lines": 110,
+      "annotated_lines": 259
+    },
+    {
+      "file": "db.py",
+      "source_lines": 584,
+      "annotated_lines": 962
+    },
+    {
+      "file": "generator.py",
+      "source_lines": 424,
+      "annotated_lines": 834
+    },
+    {
+      "file": "judge.py",
+      "source_lines": 386,
+      "annotated_lines": 861
+    },
+    {
+      "file": "knowledge.py",
+      "source_lines": 316,
+      "annotated_lines": 675
+    },
+    {
+      "file": "llm.py",
+      "source_lines": 193,
+      "annotated_lines": 484
+    },
+    {
+      "file": "main.py",
+      "source_lines": 1380,
+      "annotated_lines": 3903
+    },
+    {
+      "file": "parser.py",
+      "source_lines": 1652,
+      "annotated_lines": 3135
+    },
+    {
+      "file": "pipeline.py",
+      "source_lines": 454,
+      "annotated_lines": 1045
+    },
+    {
+      "file": "planner.py",
+      "source_lines": 262,
+      "annotated_lines": 445
+    },
+    {
+      "file": "platform_api.py",
+      "source_lines": 27,
+      "annotated_lines": 164
+    },
+    {
+      "file": "quality_api.py",
+      "source_lines": 185,
+      "annotated_lines": 537
+    },
+    {
+      "file": "reader_api.py",
+      "source_lines": 162,
+      "annotated_lines": 227
+    },
+    {
+      "file": "reports.py",
+      "source_lines": 145,
+      "annotated_lines": 330
+    },
+    {
+      "file": "security.py",
+      "source_lines": 142,
+      "annotated_lines": 422
+    },
+    {
+      "file": "sessions.py",
+      "source_lines": 734,
+      "annotated_lines": 1343
+    },
+    {
+      "file": "settings.py",
+      "source_lines": 110,
+      "annotated_lines": 301
+    },
+    {
+      "file": "teaching_api.py",
+      "source_lines": 157,
+      "annotated_lines": 589
+    },
+    {
+      "file": "url_import.py",
+      "source_lines": 198,
+      "annotated_lines": 549
+    },
+    {
+      "file": "users.py",
+      "source_lines": 126,
+      "annotated_lines": 409
+    },
+    {
+      "file": "vector_api.py",
+      "source_lines": 45,
+      "annotated_lines": 261
+    },
+    {
+      "file": "version_api.py",
+      "source_lines": 59,
+      "annotated_lines": 197
+    },
+    {
+      "file": "versions.py",
+      "source_lines": 91,
+      "annotated_lines": 326
+    }
+  ]
+}

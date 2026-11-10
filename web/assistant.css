@@ -1,0 +1,74 @@
+/* A论 AI 问答助手 */
+.alun-ai-fab {
+  position: fixed; left: 50%; right: auto; bottom: 18px; z-index: 1200;
+  transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 9px; border: 0; cursor: pointer;
+  background: var(--ink); color: var(--paper); border-radius: 999px;
+  padding: 11px 16px 11px 11px; box-shadow: 0 8px 26px rgba(29,26,22,.24);
+  font-family: var(--sans); font-size: 13px; letter-spacing: .02em; transition: .2s;
+}
+.alun-ai-fab:hover { transform: translateX(-50%) translateY(-2px); box-shadow: 0 12px 32px rgba(29,26,22,.3); }
+.alun-ai-fab .seal { width: 26px; height: 26px; border-radius: 7px; background: var(--vermilion); display: grid; place-items: center; font-family: var(--serif); font-size: 15px; }
+.alun-ai-fab .dot { width: 5px; height: 5px; border-radius: 50%; background: #92cbb7; box-shadow: 0 0 0 3px rgba(146,203,183,.16); }
+.alun-ai-overlay { position: fixed; inset: 0; z-index: 1190; background: rgba(29,26,22,.18); opacity: 0; pointer-events: none; transition: .25s; backdrop-filter: blur(2px); }
+.alun-ai-overlay.open { opacity: 1; pointer-events: auto; }
+.alun-ai-drawer {
+  position: fixed; z-index: 1200; top: 0; right: 0; height: 100vh; width: min(460px, 100vw);
+  background: var(--paper); border-left: 1px solid var(--line-strong); box-shadow: -18px 0 50px rgba(29,26,22,.14);
+  transform: translateX(102%); transition: transform .28s ease; display: flex; flex-direction: column;
+}
+.alun-ai-drawer.open { transform: translateX(0); }
+.alun-ai-head { padding: 18px 20px 15px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 10px; background: var(--paper-light); }
+.alun-ai-head .seal { width: 34px; height: 34px; border-radius: 9px; background: var(--vermilion); color: #fff; display: grid; place-items: center; font-family: var(--serif); font-size: 19px; box-shadow: 0 3px 10px rgba(178,58,43,.2); }
+.alun-ai-head h3 { font-size: 17px; line-height: 1.2; }
+.alun-ai-head p { color: var(--muted); font-size: 10.5px; margin-top: 3px; }
+.alun-ai-head .close { margin-left: auto; border: 0; background: transparent; color: var(--muted); font-size: 20px; cursor: pointer; padding: 4px 7px; border-radius: 6px; }
+.alun-ai-head .close:hover { background: var(--paper-deep); color: var(--ink); }
+.alun-ai-body { flex: 1; overflow-y: auto; padding: 18px 18px 8px; background: radial-gradient(500px 300px at 100% 0%, rgba(178,58,43,.05), transparent 70%); }
+.alun-ai-empty { padding: 24px 6px; }
+.alun-ai-empty .eyebrow { color: var(--vermilion-deep); font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; }
+.alun-ai-empty h4 { font-family: var(--serif); font-size: 25px; margin: 10px 0 8px; line-height: 1.4; }
+.alun-ai-empty p { color: var(--muted); font-size: 12px; line-height: 1.9; }
+.alun-ai-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+.alun-ai-chip { border: 1px solid var(--line-strong); background: var(--paper-light); color: var(--ink-soft); border-radius: 999px; padding: 7px 11px; font-size: 11px; cursor: pointer; }
+.alun-ai-chip:hover { border-color: var(--vermilion); color: var(--vermilion-deep); }
+.alun-ai-msg { display: flex; gap: 9px; margin: 0 0 16px; align-items: flex-start; }
+.alun-ai-msg.user { flex-direction: row-reverse; }
+.alun-ai-msg .avatar { width: 26px; height: 26px; border-radius: 7px; flex: none; display: grid; place-items: center; font-family: var(--serif); font-size: 13px; background: var(--ink); color: var(--paper); }
+.alun-ai-msg.user .avatar { background: var(--vermilion); }
+.alun-ai-bubble { max-width: calc(100% - 40px); border-radius: 3px 12px 12px 12px; background: var(--paper-light); border: 1px solid var(--line); padding: 11px 13px; font-size: 12.5px; line-height: 1.9; color: var(--ink-soft); white-space: pre-wrap; word-break: break-word; }
+.alun-ai-msg.user .bubble, .alun-ai-msg.user .alun-ai-bubble { background: var(--vermilion-soft); border-color: #e8c8ba; border-radius: 12px 3px 12px 12px; color: var(--ink); }
+.alun-ai-bubble b { color: var(--ink); }
+.alun-ai-cites { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; }
+.alun-ai-cite { font-family: var(--mono); font-size: 9.5px; background: var(--jade-soft); color: var(--jade); border-radius: 4px; padding: 2px 6px; }
+.alun-ai-sources { margin-top: 10px; padding-top: 9px; border-top: 1px dashed var(--line); display: grid; gap: 6px; }
+.alun-ai-source { font-size: 10.5px; color: var(--muted); line-height: 1.6; }
+.alun-ai-source a { color: var(--vermilion-deep); text-decoration: underline; text-underline-offset: 2px; }
+.alun-ai-source b { color: var(--ink-soft); font-weight: 600; }
+.alun-ai-typing { display: inline-flex; gap: 4px; padding: 4px 0; }
+.alun-ai-typing i { width: 5px; height: 5px; border-radius: 50%; background: var(--muted); animation: aiDot 1.2s infinite; }
+.alun-ai-typing i:nth-child(2) { animation-delay: .15s; }
+.alun-ai-typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes aiDot { 0%, 60%, 100% { opacity: .25; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-2px); } }
+.alun-ai-composer { border-top: 1px solid var(--line); background: var(--paper-light); padding: 10px 14px 11px; }
+.alun-ai-previews { display: flex; gap: 7px; flex-wrap: wrap; padding: 3px 0 8px; }
+.alun-ai-thumb { width: 52px; height: 52px; border-radius: 7px; object-fit: cover; border: 1px solid var(--line-strong); }
+.alun-ai-input-row { display: flex; align-items: flex-end; gap: 7px; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--paper); padding: 7px 8px; }
+.alun-ai-input-row:focus-within { border-color: var(--vermilion); box-shadow: 0 0 0 3px rgba(178,58,43,.07); }
+.alun-ai-input { flex: 1; min-height: 46px; max-height: 130px; resize: none; border: 0; outline: none; background: transparent; font-family: var(--sans); font-size: 12.5px; line-height: 1.7; color: var(--ink); padding: 3px 2px; }
+.alun-ai-attach, .alun-ai-send { border: 0; cursor: pointer; border-radius: 7px; flex: none; display: grid; place-items: center; }
+.alun-ai-attach { width: 30px; height: 30px; background: transparent; color: var(--muted); font-size: 18px; }
+.alun-ai-attach:hover { background: var(--paper-deep); color: var(--ink); }
+.alun-ai-send { width: 30px; height: 30px; background: var(--vermilion); color: #fff; font-size: 15px; }
+.alun-ai-send:disabled { opacity: .4; cursor: wait; }
+.alun-ai-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 8px; color: var(--faint); font-size: 9.5px; }
+.alun-ai-web-toggle { display: flex; align-items: center; gap: 5px; cursor: pointer; color: var(--muted); font-size: 9.5px; }
+.alun-ai-web-toggle input { accent-color: var(--jade); }
+.alun-ai-hint { padding: 7px 0 0; color: var(--faint); font-size: 9px; text-align: center; }
+@media (max-width: 600px) {
+  .alun-ai-fab { left: 50%; right: auto; bottom: 12px; }
+  .alun-ai-drawer { width: 100vw; }
+  .alun-ai-head { padding: 14px 15px; }
+  .alun-ai-body { padding: 14px 14px 6px; }
+  .alun-ai-bubble { font-size: 12px; }
+}

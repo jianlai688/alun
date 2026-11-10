@@ -1,0 +1,103 @@
+services:
+  postgres:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.postgres18
+    image: alun-postgres-pgvector:18
+    environment:
+      POSTGRES_DB: alun
+      POSTGRES_USER: alun
+      POSTGRES_PASSWORD: ${ALUN_DB_PASSWORD:-alun_dev_password}
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - alun_pgdata:/var/lib/postgresql18/data
+    healthcheck:
+      test: ["CMD-SHELL", "/usr/local/bin/psql -U alun -d alun -c 'select 1' >/dev/null"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--requirepass", "${ALUN_REDIS_PASSWORD:-alun_dev_redis}"]
+    ports:
+      - "127.0.0.1:6380:6379"
+    volumes:
+      - alun_redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${ALUN_REDIS_PASSWORD:-alun_dev_redis}", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  minio:
+    image: pgsty/minio:RELEASE.2026-08-04T00-00-00Z
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: ${ALUN_S3_ACCESS_KEY:-alun}
+      MINIO_ROOT_PASSWORD: ${ALUN_S3_SECRET_KEY:-alun_dev_password}
+    ports:
+      - "127.0.0.1:9000:9000"
+      - "127.0.0.1:9001:9001"
+    volumes:
+      - alun_minio:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build:
+      context: ..
+      dockerfile: platform/docker/Dockerfile.app
+    image: alun-app:v2
+    environment:
+      ALUN_DB_BACKEND: postgres
+      ALUN_DATABASE_URL: postgresql://alun:${ALUN_DB_PASSWORD:-alun_dev_password}@postgres:5432/alun
+      ALUN_REDIS_URL: redis://:${ALUN_REDIS_PASSWORD:-alun_dev_redis}@redis:6379/1
+      ALUN_QUEUE_BACKEND: redis
+      ALUN_S3_ENDPOINT: http://minio:9000
+      ALUN_S3_ACCESS_KEY: ${ALUN_S3_ACCESS_KEY:-alun}
+      ALUN_S3_SECRET_KEY: ${ALUN_S3_SECRET_KEY:-alun_dev_password}
+      ALUN_S3_BUCKET: alun-documents
+      ALUN_AUTH_SECRET: ${ALUN_AUTH_SECRET:-alun-platform-dev-secret-please-change}
+      ALUN_DATA_DIR: /data
+      ALUN_LOG_JSON: "1"
+    ports:
+      - "8010:8010"
+    volumes:
+      - alun_appdata:/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+
+  worker:
+    image: alun-app:v2
+    command: ["python", "-m", "alun.platform.worker", "worker-compose"]
+    environment:
+      ALUN_DB_BACKEND: postgres
+      ALUN_DATABASE_URL: postgresql://alun:${ALUN_DB_PASSWORD:-alun_dev_password}@postgres:5432/alun
+      ALUN_REDIS_URL: redis://:${ALUN_REDIS_PASSWORD:-alun_dev_redis}@redis:6379/1
+      ALUN_QUEUE_BACKEND: redis
+      ALUN_S3_ENDPOINT: http://minio:9000
+      ALUN_S3_ACCESS_KEY: ${ALUN_S3_ACCESS_KEY:-alun}
+      ALUN_S3_SECRET_KEY: ${ALUN_S3_SECRET_KEY:-alun_dev_password}
+      ALUN_S3_BUCKET: alun-documents
+      ALUN_AUTH_SECRET: ${ALUN_AUTH_SECRET:-alun-platform-dev-secret-please-change}
+      ALUN_DATA_DIR: /data
+    volumes:
+      - alun_appdata:/data
+    depends_on:
+      - app
+
+volumes:
+  alun_pgdata:
+  alun_redis:
+  alun_minio:
+  alun_appdata:
